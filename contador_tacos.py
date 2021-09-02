@@ -1,4 +1,4 @@
-def contar_tacos(familia):
+def contar_tacos(familia, menu = True):
 
     pastel = 500/5
     botana_Lu = 390/5
@@ -9,12 +9,20 @@ def contar_tacos(familia):
       "enchiloso": 0}
 
     print(f"Calculando los tacos de la familia de {familia[0]} ...")
-    
-    taco_n = input("Tacos normales: ")
-    orden["taco_normal"] = int(taco_n)
 
-    taco_e = input("Tacos enchilosos: ")
-    orden["enchiloso"] = int(taco_e)
+    while menu == True:
+      
+      try: 
+        taco_n = input("Tacos normales: ")
+        orden["taco_normal"] = int(taco_n)
+
+        taco_e = input("Tacos enchilosos: ")
+        orden["enchiloso"] = int(taco_e)
+
+        menu = False
+
+      except ValueError:
+        print('Por favor utiliza numeros enteros para indicar cuantos tacos, no palabras')
     
     cuenta = (orden["taco_normal"] * 40) + (orden["enchiloso"] * 50) + pastel + botana_Lu + botana_Bren - familia[1]
     respuesta = (f"La cuenta de {familia[0]} es de: ${cuenta}\n")
