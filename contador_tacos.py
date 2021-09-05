@@ -29,8 +29,11 @@ def contar_tacos(familia, menu = True):
     
     return respuesta
 
-familias = [("Wendy",500),("Debbie",0),("Brendis",500),("Lu",390),("Papas",0)]
-
-for familia in familias:
-    x = contar_tacos(familia)
-    print(x)
+if __name__ == '__main__':
+    
+    familias = [("Wendy",500),("Debbie",0),("Brendis",500),("Lu",390),("Papas",0)]
+    
+    for familia in familias:
+        
+        x = contar_tacos(familia)
+        print(x)
