@@ -31,7 +31,7 @@ def contar_tacos(familia, menu = True):
 
 if __name__ == '__main__':
     
-    familias = [("Wendy",500),("Debbie",0),("Brendis",500),("Lu",390),("Papas",0)]
+    familias = [("Wendy",500),("Debbie",290),("Brendis",500),("Lu",390),("Papas",0)]
     
     for familia in familias:
         
